@@ -1,4 +1,4 @@
-package com.hami.spring.security.demo.config;
+package com.hami.spring.security.demo.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +26,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/","/home").permitAll()
+                .antMatchers("/api/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
             .formLogin()

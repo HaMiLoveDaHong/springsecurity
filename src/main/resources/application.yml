@@ -7,3 +7,15 @@ spring:
     url: 127.0.0.1
     port: 6379
     password:
+    jedis:
+      pool:
+        ### 链接池最大链接数(使用赋值表示没有限制)
+        max-active: 8
+        ### 链接池最大阻塞等待时间(使用赋值表示没有限制)
+        max-wait: -1
+        ### 连接池中的最大空闲链接
+        max-idle: 5
+        ### 链接池中最小空闲链接
+        min-idle: 0
+    ### 链接超时时间（毫秒）
+    timeout: 10000
